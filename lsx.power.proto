@@ -45,12 +45,6 @@ message GetPowerLineState {
     message Request {
         PowerLineId id = 1;
     }
-
-    oneof message {
-        Request request = 1;
-        Response response = 2;
-        string error = 3;
-    }
 }
 
 message SetPowerLineState {
@@ -59,15 +53,7 @@ message SetPowerLineState {
         PowerLineState state = 2;
     }
 
-    message Response {
-
-    }
-
-    oneof message {
-        Request request = 1;
-        Response response = 2;
-        string error = 3;
-    }
+    message Response {}
 }
 
 message GetPowerLineLockedState {
@@ -78,12 +64,6 @@ message GetPowerLineLockedState {
     message Request {
         PowerLineId id = 1;
     }
-
-    oneof message {
-        Request request = 1;
-        Response response = 2;
-        string error = 3;
-    }
 }
 
 message SetPowerLineLockedState {
@@ -92,28 +72,14 @@ message SetPowerLineLockedState {
         PowerLineLockedState state = 2;
     }
 
-    message Response {
-
-    }
-
-    oneof message {
-        Request request = 1;
-        Response response = 2;
-        string error = 3;
-    }
+    message Response {}
 }
 
 message GetPowerPlantState {
-    message Request {
+    message Request {}
 
-    }
     message Response {
         PowerPlantState state = 1;
-    }
-    oneof message {
-        Request request = 1;
-        Response response = 2;
-        string error = 3;
     }
 }
 
@@ -121,12 +87,5 @@ message SetPowerPlantState {
     message Request {
         PowerPlantState state = 1;
     }
-    message Response {
-
-    }
-    oneof message {
-        Request request = 1;
-        Response response = 2;
-        string error = 3;
-    }
+    message Response {}
 }

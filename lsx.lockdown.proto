@@ -11,15 +11,7 @@ message GetAutoLockdown {
         bool state = 1;
     }
 
-    message Request {
-
-    }
-
-    oneof message {
-        Request request = 1;
-        Response response = 2;
-        string error = 3;
-    }
+    message Request { }
 }
 
 message SetAutoLockdown {
@@ -27,15 +19,7 @@ message SetAutoLockdown {
         bool state = 1;
     }
 
-    message Response {
-
-    }
-
-    oneof message {
-        Request request = 1;
-        Response response = 2;
-        string error = 3;
-    }
+    message Response { }
 }
 
 message GetLockdownState {
@@ -43,15 +27,7 @@ message GetLockdownState {
         LockdownState state = 1;
     }
 
-    message Request {
-
-    }
-
-    oneof message {
-        Request request = 1;
-        Response response = 2;
-        string error = 3;
-    }
+    message Request { }
 }
 
 message SetLockdownState {
@@ -59,15 +35,7 @@ message SetLockdownState {
         LockdownState state = 1;
     }
 
-    message Response {
-
-    }
-
-    oneof message {
-        Request request = 1;
-        Response response = 2;
-        string error = 3;
-    }
+    message Response { }
 }
 
 message GetLockdownAnnouncements {
@@ -75,15 +43,7 @@ message GetLockdownAnnouncements {
         bool state = 1;
     }
 
-    message Request {
-
-    }
-
-    oneof message {
-        Request request = 1;
-        Response response = 2;
-        string error = 3;
-    }
+    message Request { }
 }
 
 message SetLockdownAnnouncements {
@@ -91,14 +51,6 @@ message SetLockdownAnnouncements {
         bool state = 1;
     }
 
-    message Response {
-
-    }
-
-    oneof message {
-        Request request = 1;
-        Response response = 2;
-        string error = 3;
-    }
+    message Response { }
 }
 
