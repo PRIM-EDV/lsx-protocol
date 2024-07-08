@@ -16,6 +16,13 @@ enum LightDMXState {
     DMX_STATE_FLICKER = 4;
 }
 
+enum LightMode {
+    LIGHT_MODE_EMPTY = 0;
+    LIGHT_MODE_WHITE = 1;
+    LIGHT_MODE_RED = 2;
+    LIGHT_MODE_BLACKOUT = 3;
+}
+
 enum LightId {
     LIGHT_EMPTY = 0;
     LIGHT_OG_BASE_MED = 1;
@@ -150,6 +157,37 @@ message SetLightLockState {
     message Request {
         LightId id = 1;
         LockState state = 2;
+    }
+
+    message Response {}
+
+    oneof message {
+        Request request = 1;
+        Response response = 2;
+        string error = 3;
+    }
+}
+
+message GetLightMode {
+    message Response {
+        LightMode mode = 1;
+    }
+
+    message Request {
+        LightId id = 1;
+    }
+
+    oneof message {
+        Request request = 1;
+        Response response = 2;
+        string error = 3;
+    }
+}
+
+message SetLightMode {
+    message Request {
+        LightId id = 1;
+        LightMode mode = 2;
     }
 
     message Response {}
