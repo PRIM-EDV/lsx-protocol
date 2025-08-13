@@ -5,6 +5,7 @@ enum PowerState {
     POWER_STATE_POWERED = 1;
     POWER_STATE_CRITICAL = 2;
     POWER_STATE_UNPOWERED = 3;
+    POWER_STATE_EMERGENCY = 4;
 }
 
 enum PowerPlantState {
@@ -18,6 +19,9 @@ enum PowerPlantState {
 enum PowerDevice{
     DEVICE_CIC_MAPTOOL = 0;
     DEVICE_ADM_BASETOOL = 1;
+    DEVICE_IRD_RAPIDCARE = 2;
+    DEVICE_MED_OP_ROOM = 3;
+    DEVICE_CIC_COFFEE = 4;
 }
 
 message GetPowerPlantState {
