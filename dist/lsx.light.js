@@ -38,7 +38,7 @@ var __importStar = (this && this.__importStar) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SetLightMode_Response = exports.SetLightMode_Request = exports.SetLightMode = exports.GetLightMode_Request = exports.GetLightMode_Response = exports.GetLightMode = exports.SetLightLockState_Response = exports.SetLightLockState_Request = exports.SetLightLockState = exports.GetLightLockState_Request = exports.GetLightLockState_Response = exports.GetLightLockState = exports.SetLightDmxState_Response = exports.SetLightDmxState_Request = exports.SetLightDmxState = exports.GetLightDmxState_Request = exports.GetLightDmxState_Response = exports.GetLightDmxState = exports.SetLightSwitchState_Response = exports.SetLightSwitchState_Request = exports.SetLightSwitchState = exports.GetLightSwitchState_Request = exports.GetLightSwitchState_Response = exports.GetLightSwitchState = exports.SetLightPowerState_Response = exports.SetLightPowerState_Request = exports.SetLightPowerState = exports.GetLightPowerState_Request = exports.GetLightPowerState_Response = exports.GetLightPowerState = exports.LightId = exports.LightMode = exports.LightDMXState = exports.LightSwitchState = exports.protobufPackage = void 0;
+exports.SetLightMode_Response = exports.SetLightMode_Request = exports.SetLightMode = exports.GetLightMode_Request = exports.GetLightMode_Response = exports.GetLightMode = exports.SetLightLockState_Response = exports.SetLightLockState_Request = exports.SetLightLockState = exports.GetLightLockState_Request = exports.GetLightLockState_Response = exports.GetLightLockState = exports.SetLightDmxState_Response = exports.SetLightDmxState_Request = exports.SetLightDmxState = exports.GetLightDmxState_Request = exports.GetLightDmxState_Response = exports.GetLightDmxState = exports.SetLightSwitchState_Response = exports.SetLightSwitchState_Request = exports.SetLightSwitchState = exports.GetLightSwitchState_Request = exports.GetLightSwitchState_Response = exports.GetLightSwitchState = exports.SetLightPowerState_Response = exports.SetLightPowerState_Request = exports.SetLightPowerState = exports.GetLightPowerState_Request = exports.GetLightPowerState_Response = exports.GetLightPowerState = exports.LightId = exports.LightMode = exports.LightDMXState = exports.LightSwitchState = void 0;
 exports.lightSwitchStateFromJSON = lightSwitchStateFromJSON;
 exports.lightSwitchStateToJSON = lightSwitchStateToJSON;
 exports.lightDMXStateFromJSON = lightDMXStateFromJSON;
@@ -51,7 +51,6 @@ exports.lightIdToJSON = lightIdToJSON;
 const _m0 = __importStar(require("protobufjs/minimal"));
 const lsx_common_1 = require("./lsx.common");
 const lsx_power_1 = require("./lsx.power");
-exports.protobufPackage = "";
 var LightSwitchState;
 (function (LightSwitchState) {
     LightSwitchState[LightSwitchState["SWITCH_STATE_OFF"] = 0] = "SWITCH_STATE_OFF";

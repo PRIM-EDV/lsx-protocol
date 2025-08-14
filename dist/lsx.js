@@ -38,7 +38,7 @@ var __importStar = (this && this.__importStar) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PlayAnnouncement_Response = exports.PlayAnnouncement_Request = exports.PlayAnnouncement = exports.GetAnnouncementFiles_Request = exports.GetAnnouncementFiles_Response = exports.GetAnnouncementFiles = exports.LsxMessage = exports.Error = exports.Response = exports.Request = exports.protobufPackage = void 0;
+exports.PlayAnnouncement_Response = exports.PlayAnnouncement_Request = exports.PlayAnnouncement = exports.GetAnnouncementFiles_Request = exports.GetAnnouncementFiles_Response = exports.GetAnnouncementFiles = exports.LsxMessage = exports.Error = exports.Response = exports.Request = void 0;
 /* eslint-disable */
 const _m0 = __importStar(require("protobufjs/minimal"));
 const lsx_drone_1 = require("./lsx.drone");
@@ -46,7 +46,6 @@ const lsx_fluff_1 = require("./lsx.fluff");
 const lsx_light_1 = require("./lsx.light");
 const lsx_lockdown_1 = require("./lsx.lockdown");
 const lsx_power_1 = require("./lsx.power");
-exports.protobufPackage = "";
 function createBaseRequest() {
     return {
         getPowerPlantState: undefined,

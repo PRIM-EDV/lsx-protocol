@@ -38,12 +38,11 @@ var __importStar = (this && this.__importStar) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SetLockdownAnnouncements_Response = exports.SetLockdownAnnouncements_Request = exports.SetLockdownAnnouncements = exports.GetLockdownAnnouncements_Request = exports.GetLockdownAnnouncements_Response = exports.GetLockdownAnnouncements = exports.SetLockdownState_Response = exports.SetLockdownState_Request = exports.SetLockdownState = exports.GetLockdownState_Request = exports.GetLockdownState_Response = exports.GetLockdownState = exports.SetAutoLockdown_Response = exports.SetAutoLockdown_Request = exports.SetAutoLockdown = exports.GetAutoLockdown_Request = exports.GetAutoLockdown_Response = exports.GetAutoLockdown = exports.LockdownState = exports.protobufPackage = void 0;
+exports.SetLockdownAnnouncements_Response = exports.SetLockdownAnnouncements_Request = exports.SetLockdownAnnouncements = exports.GetLockdownAnnouncements_Request = exports.GetLockdownAnnouncements_Response = exports.GetLockdownAnnouncements = exports.SetLockdownState_Response = exports.SetLockdownState_Request = exports.SetLockdownState = exports.GetLockdownState_Request = exports.GetLockdownState_Response = exports.GetLockdownState = exports.SetAutoLockdown_Response = exports.SetAutoLockdown_Request = exports.SetAutoLockdown = exports.GetAutoLockdown_Request = exports.GetAutoLockdown_Response = exports.GetAutoLockdown = exports.LockdownState = void 0;
 exports.lockdownStateFromJSON = lockdownStateFromJSON;
 exports.lockdownStateToJSON = lockdownStateToJSON;
 /* eslint-disable */
 const _m0 = __importStar(require("protobufjs/minimal"));
-exports.protobufPackage = "";
 var LockdownState;
 (function (LockdownState) {
     LockdownState[LockdownState["LOCKDOWN_STATE_EMPTY"] = 0] = "LOCKDOWN_STATE_EMPTY";

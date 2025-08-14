@@ -5,7 +5,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "npm run proto:generate && tsc",
-    "proto:generate": "protoc -I=./proto --ts_proto_opt=messages=true --ts_proto_out=./src ./proto/lsx.proto"
+    "proto:generate": "protoc -I=./proto --ts_proto_opt=messages=true --ts_proto_opt=exportCommonSymbols=false --ts_proto_out=./src ./proto/lsx.proto"
   },
   "devDependencies": {
     "ts-proto": "^1.125.0",

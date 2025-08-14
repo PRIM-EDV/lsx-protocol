@@ -38,10 +38,9 @@ var __importStar = (this && this.__importStar) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SetFluffState_Response = exports.SetFluffState_Request = exports.SetFluffState = exports.GetFluffState_Request = exports.GetFluffState_Response = exports.GetFluffState = exports.GetFluffFiles_Request = exports.GetFluffFiles_Response = exports.GetFluffFiles = exports.protobufPackage = void 0;
+exports.SetFluffState_Response = exports.SetFluffState_Request = exports.SetFluffState = exports.GetFluffState_Request = exports.GetFluffState_Response = exports.GetFluffState = exports.GetFluffFiles_Request = exports.GetFluffFiles_Response = exports.GetFluffFiles = void 0;
 /* eslint-disable */
 const _m0 = __importStar(require("protobufjs/minimal"));
-exports.protobufPackage = "";
 function createBaseGetFluffFiles() {
     return {};
 }

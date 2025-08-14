@@ -38,7 +38,7 @@ var __importStar = (this && this.__importStar) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SetModeSilentState_Response = exports.SetModeSilentState_Request = exports.SetModeSilentState = exports.GetModeSilentState_Request = exports.GetModeSilentState_Response = exports.GetModeSilentState = exports.GetBombAreaState_Request = exports.GetBombAreaState_Response = exports.GetBombAreaState = exports.BombArea_Request = exports.BombArea_Response = exports.BombArea = exports.BombBase_Request = exports.BombBase_Response = exports.BombBase = exports.ModeSilentState = exports.BombAreaState = exports.BombAreaId = exports.protobufPackage = void 0;
+exports.SetModeSilentState_Response = exports.SetModeSilentState_Request = exports.SetModeSilentState = exports.GetModeSilentState_Request = exports.GetModeSilentState_Response = exports.GetModeSilentState = exports.GetBombAreaState_Request = exports.GetBombAreaState_Response = exports.GetBombAreaState = exports.BombArea_Request = exports.BombArea_Response = exports.BombArea = exports.BombBase_Request = exports.BombBase_Response = exports.BombBase = exports.ModeSilentState = exports.BombAreaState = exports.BombAreaId = void 0;
 exports.bombAreaIdFromJSON = bombAreaIdFromJSON;
 exports.bombAreaIdToJSON = bombAreaIdToJSON;
 exports.bombAreaStateFromJSON = bombAreaStateFromJSON;
@@ -47,7 +47,6 @@ exports.modeSilentStateFromJSON = modeSilentStateFromJSON;
 exports.modeSilentStateToJSON = modeSilentStateToJSON;
 /* eslint-disable */
 const _m0 = __importStar(require("protobufjs/minimal"));
-exports.protobufPackage = "";
 var BombAreaId;
 (function (BombAreaId) {
     BombAreaId[BombAreaId["AREA_MED"] = 0] = "AREA_MED";

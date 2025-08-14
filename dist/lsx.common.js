@@ -5,11 +5,10 @@
 //   protoc               v4.25.3
 // source: lsx.common.proto
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LockState = exports.protobufPackage = void 0;
+exports.LockState = void 0;
 exports.lockStateFromJSON = lockStateFromJSON;
 exports.lockStateToJSON = lockStateToJSON;
 /* eslint-disable */
-exports.protobufPackage = "";
 var LockState;
 (function (LockState) {
     LockState[LockState["LOCK_STATE_EMPTY"] = 0] = "LOCK_STATE_EMPTY";

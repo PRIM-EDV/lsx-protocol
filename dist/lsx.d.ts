@@ -4,7 +4,6 @@ import { GetFluffFiles_Request, GetFluffFiles_Response, GetFluffState_Request, G
 import { GetLightDmxState_Request, GetLightDmxState_Response, GetLightLockState_Request, GetLightLockState_Response, GetLightMode_Request, GetLightMode_Response, GetLightPowerState_Request, GetLightPowerState_Response, GetLightSwitchState_Request, GetLightSwitchState_Response, SetLightDmxState_Request, SetLightDmxState_Response, SetLightLockState_Request, SetLightLockState_Response, SetLightMode_Request, SetLightMode_Response, SetLightPowerState_Request, SetLightPowerState_Response, SetLightSwitchState_Request, SetLightSwitchState_Response } from "./lsx.light";
 import { GetAutoLockdown_Request, GetAutoLockdown_Response, GetLockdownAnnouncements_Request, GetLockdownAnnouncements_Response, GetLockdownState_Request, GetLockdownState_Response, SetAutoLockdown_Request, SetAutoLockdown_Response, SetLockdownAnnouncements_Request, SetLockdownAnnouncements_Response, SetLockdownState_Request, SetLockdownState_Response } from "./lsx.lockdown";
 import { GetDevicePowerState_Request, GetDevicePowerState_Response, GetPowerPlantState_Request, GetPowerPlantState_Response, SetDevicePowerState_Request, SetDevicePowerState_Response, SetPowerPlantState_Request, SetPowerPlantState_Response } from "./lsx.power";
-export declare const protobufPackage = "";
 export interface Request {
     getPowerPlantState?: GetPowerPlantState_Request | undefined;
     setPowerPlantState?: SetPowerPlantState_Request | undefined;
@@ -186,11 +185,11 @@ export declare const PlayAnnouncement_Response: {
     fromPartial<I extends Exact<DeepPartial<PlayAnnouncement_Response>, I>>(_: I): PlayAnnouncement_Response;
 };
 type Builtin = Date | Function | Uint8Array | string | number | boolean | undefined;
-export type DeepPartial<T> = T extends Builtin ? T : T extends globalThis.Array<infer U> ? globalThis.Array<DeepPartial<U>> : T extends ReadonlyArray<infer U> ? ReadonlyArray<DeepPartial<U>> : T extends {} ? {
+type DeepPartial<T> = T extends Builtin ? T : T extends globalThis.Array<infer U> ? globalThis.Array<DeepPartial<U>> : T extends ReadonlyArray<infer U> ? ReadonlyArray<DeepPartial<U>> : T extends {} ? {
     [K in keyof T]?: DeepPartial<T[K]>;
 } : Partial<T>;
 type KeysOfUnion<T> = T extends T ? keyof T : never;
-export type Exact<P, I extends P> = P extends Builtin ? P : P & {
+type Exact<P, I extends P> = P extends Builtin ? P : P & {
     [K in keyof P]: Exact<P[K], I[K]>;
 } & {
     [K in Exclude<keyof I, KeysOfUnion<P>>]: never;

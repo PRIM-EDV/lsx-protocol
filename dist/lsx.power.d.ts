@@ -1,5 +1,4 @@
 import * as _m0 from "protobufjs/minimal";
-export declare const protobufPackage = "";
 export declare enum PowerState {
     POWER_STATE_EMPTY = 0,
     POWER_STATE_POWERED = 1,
@@ -157,11 +156,11 @@ export declare const GetDevicePowerState_Response: {
     fromPartial<I extends Exact<DeepPartial<GetDevicePowerState_Response>, I>>(object: I): GetDevicePowerState_Response;
 };
 type Builtin = Date | Function | Uint8Array | string | number | boolean | undefined;
-export type DeepPartial<T> = T extends Builtin ? T : T extends globalThis.Array<infer U> ? globalThis.Array<DeepPartial<U>> : T extends ReadonlyArray<infer U> ? ReadonlyArray<DeepPartial<U>> : T extends {} ? {
+type DeepPartial<T> = T extends Builtin ? T : T extends globalThis.Array<infer U> ? globalThis.Array<DeepPartial<U>> : T extends ReadonlyArray<infer U> ? ReadonlyArray<DeepPartial<U>> : T extends {} ? {
     [K in keyof T]?: DeepPartial<T[K]>;
 } : Partial<T>;
 type KeysOfUnion<T> = T extends T ? keyof T : never;
-export type Exact<P, I extends P> = P extends Builtin ? P : P & {
+type Exact<P, I extends P> = P extends Builtin ? P : P & {
     [K in keyof P]: Exact<P[K], I[K]>;
 } & {
     [K in Exclude<keyof I, KeysOfUnion<P>>]: never;

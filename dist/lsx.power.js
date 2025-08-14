@@ -38,7 +38,7 @@ var __importStar = (this && this.__importStar) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.GetDevicePowerState_Response = exports.GetDevicePowerState_Request = exports.GetDevicePowerState = exports.SetDevicePowerState_Response = exports.SetDevicePowerState_Request = exports.SetDevicePowerState = exports.SetPowerPlantState_Response = exports.SetPowerPlantState_Request = exports.SetPowerPlantState = exports.GetPowerPlantState_Response = exports.GetPowerPlantState_Request = exports.GetPowerPlantState = exports.PowerDevice = exports.PowerPlantState = exports.PowerState = exports.protobufPackage = void 0;
+exports.GetDevicePowerState_Response = exports.GetDevicePowerState_Request = exports.GetDevicePowerState = exports.SetDevicePowerState_Response = exports.SetDevicePowerState_Request = exports.SetDevicePowerState = exports.SetPowerPlantState_Response = exports.SetPowerPlantState_Request = exports.SetPowerPlantState = exports.GetPowerPlantState_Response = exports.GetPowerPlantState_Request = exports.GetPowerPlantState = exports.PowerDevice = exports.PowerPlantState = exports.PowerState = void 0;
 exports.powerStateFromJSON = powerStateFromJSON;
 exports.powerStateToJSON = powerStateToJSON;
 exports.powerPlantStateFromJSON = powerPlantStateFromJSON;
@@ -47,7 +47,6 @@ exports.powerDeviceFromJSON = powerDeviceFromJSON;
 exports.powerDeviceToJSON = powerDeviceToJSON;
 /* eslint-disable */
 const _m0 = __importStar(require("protobufjs/minimal"));
-exports.protobufPackage = "";
 var PowerState;
 (function (PowerState) {
     PowerState[PowerState["POWER_STATE_EMPTY"] = 0] = "POWER_STATE_EMPTY";

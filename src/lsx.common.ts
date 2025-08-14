@@ -6,8 +6,6 @@
 
 /* eslint-disable */
 
-export const protobufPackage = "";
-
 export enum LockState {
   LOCK_STATE_EMPTY = 0,
   LOCK_STATE_LOCKED = 1,

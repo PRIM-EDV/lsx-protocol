@@ -9,8 +9,6 @@ import * as _m0 from "protobufjs/minimal";
 import { LockState, lockStateFromJSON, lockStateToJSON } from "./lsx.common";
 import { PowerState, powerStateFromJSON, powerStateToJSON } from "./lsx.power";
 
-export const protobufPackage = "";
-
 export enum LightSwitchState {
   SWITCH_STATE_OFF = 0,
   SWITCH_STATE_ON = 1,
@@ -2497,14 +2495,14 @@ export const SetLightMode_Response = {
 
 type Builtin = Date | Function | Uint8Array | string | number | boolean | undefined;
 
-export type DeepPartial<T> = T extends Builtin ? T
+type DeepPartial<T> = T extends Builtin ? T
   : T extends globalThis.Array<infer U> ? globalThis.Array<DeepPartial<U>>
   : T extends ReadonlyArray<infer U> ? ReadonlyArray<DeepPartial<U>>
   : T extends {} ? { [K in keyof T]?: DeepPartial<T[K]> }
   : Partial<T>;
 
 type KeysOfUnion<T> = T extends T ? keyof T : never;
-export type Exact<P, I extends P> = P extends Builtin ? P
+type Exact<P, I extends P> = P extends Builtin ? P
   : P & { [K in keyof P]: Exact<P[K], I[K]> } & { [K in Exclude<keyof I, KeysOfUnion<P>>]: never };
 
 function isSet(value: any): boolean {
