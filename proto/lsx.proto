@@ -44,6 +44,8 @@ message Request {
         //
         GetDevicePowerState.Request get_device_power_state = 31;
         SetDevicePowerState.Request set_device_power_state = 32;
+
+        PlayEnvironment.Request play_environment = 33;
     }
 }
 
@@ -85,6 +87,8 @@ message Response {
         //
         GetDevicePowerState.Response get_device_power_state = 31;
         SetDevicePowerState.Response set_device_power_state = 32;
+
+        PlayEnvironment.Response play_environment = 33;
     }
 }
 
@@ -112,6 +116,14 @@ message GetAnnouncementFiles {
 }
 
 message PlayAnnouncement {
+    message Request {
+        string filepath = 1;
+    }
+
+    message Response {}
+}
+
+message PlayEnvironment {
     message Request {
         string filepath = 1;
     }

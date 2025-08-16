@@ -116,6 +116,7 @@ export interface Request {
   /**  */
   getDevicePowerState?: GetDevicePowerState_Request | undefined;
   setDevicePowerState?: SetDevicePowerState_Request | undefined;
+  playEnvironment?: PlayEnvironment_Request | undefined;
 }
 
 export interface Response {
@@ -161,6 +162,7 @@ export interface Response {
   /**  */
   getDevicePowerState?: GetDevicePowerState_Response | undefined;
   setDevicePowerState?: SetDevicePowerState_Response | undefined;
+  playEnvironment?: PlayEnvironment_Response | undefined;
 }
 
 export interface Error {
@@ -195,6 +197,16 @@ export interface PlayAnnouncement_Request {
 export interface PlayAnnouncement_Response {
 }
 
+export interface PlayEnvironment {
+}
+
+export interface PlayEnvironment_Request {
+  filepath: string;
+}
+
+export interface PlayEnvironment_Response {
+}
+
 function createBaseRequest(): Request {
   return {
     getPowerPlantState: undefined,
@@ -227,6 +239,7 @@ function createBaseRequest(): Request {
     setLightMode: undefined,
     getDevicePowerState: undefined,
     setDevicePowerState: undefined,
+    playEnvironment: undefined,
   };
 }
 
@@ -321,6 +334,9 @@ export const Request = {
     }
     if (message.setDevicePowerState !== undefined) {
       SetDevicePowerState_Request.encode(message.setDevicePowerState, writer.uint32(258).fork()).ldelim();
+    }
+    if (message.playEnvironment !== undefined) {
+      PlayEnvironment_Request.encode(message.playEnvironment, writer.uint32(266).fork()).ldelim();
     }
     return writer;
   },
@@ -542,6 +558,13 @@ export const Request = {
 
           message.setDevicePowerState = SetDevicePowerState_Request.decode(reader, reader.uint32());
           continue;
+        case 33:
+          if (tag !== 266) {
+            break;
+          }
+
+          message.playEnvironment = PlayEnvironment_Request.decode(reader, reader.uint32());
+          continue;
       }
       if ((tag & 7) === 4 || tag === 0) {
         break;
@@ -628,6 +651,9 @@ export const Request = {
         : undefined,
       setDevicePowerState: isSet(object.setDevicePowerState)
         ? SetDevicePowerState_Request.fromJSON(object.setDevicePowerState)
+        : undefined,
+      playEnvironment: isSet(object.playEnvironment)
+        ? PlayEnvironment_Request.fromJSON(object.playEnvironment)
         : undefined,
     };
   },
@@ -723,6 +749,9 @@ export const Request = {
     }
     if (message.setDevicePowerState !== undefined) {
       obj.setDevicePowerState = SetDevicePowerState_Request.toJSON(message.setDevicePowerState);
+    }
+    if (message.playEnvironment !== undefined) {
+      obj.playEnvironment = PlayEnvironment_Request.toJSON(message.playEnvironment);
     }
     return obj;
   },
@@ -824,6 +853,9 @@ export const Request = {
     message.setDevicePowerState = (object.setDevicePowerState !== undefined && object.setDevicePowerState !== null)
       ? SetDevicePowerState_Request.fromPartial(object.setDevicePowerState)
       : undefined;
+    message.playEnvironment = (object.playEnvironment !== undefined && object.playEnvironment !== null)
+      ? PlayEnvironment_Request.fromPartial(object.playEnvironment)
+      : undefined;
     return message;
   },
 };
@@ -860,6 +892,7 @@ function createBaseResponse(): Response {
     setLightMode: undefined,
     getDevicePowerState: undefined,
     setDevicePowerState: undefined,
+    playEnvironment: undefined,
   };
 }
 
@@ -954,6 +987,9 @@ export const Response = {
     }
     if (message.setDevicePowerState !== undefined) {
       SetDevicePowerState_Response.encode(message.setDevicePowerState, writer.uint32(258).fork()).ldelim();
+    }
+    if (message.playEnvironment !== undefined) {
+      PlayEnvironment_Response.encode(message.playEnvironment, writer.uint32(266).fork()).ldelim();
     }
     return writer;
   },
@@ -1175,6 +1211,13 @@ export const Response = {
 
           message.setDevicePowerState = SetDevicePowerState_Response.decode(reader, reader.uint32());
           continue;
+        case 33:
+          if (tag !== 266) {
+            break;
+          }
+
+          message.playEnvironment = PlayEnvironment_Response.decode(reader, reader.uint32());
+          continue;
       }
       if ((tag & 7) === 4 || tag === 0) {
         break;
@@ -1261,6 +1304,9 @@ export const Response = {
         : undefined,
       setDevicePowerState: isSet(object.setDevicePowerState)
         ? SetDevicePowerState_Response.fromJSON(object.setDevicePowerState)
+        : undefined,
+      playEnvironment: isSet(object.playEnvironment)
+        ? PlayEnvironment_Response.fromJSON(object.playEnvironment)
         : undefined,
     };
   },
@@ -1356,6 +1402,9 @@ export const Response = {
     }
     if (message.setDevicePowerState !== undefined) {
       obj.setDevicePowerState = SetDevicePowerState_Response.toJSON(message.setDevicePowerState);
+    }
+    if (message.playEnvironment !== undefined) {
+      obj.playEnvironment = PlayEnvironment_Response.toJSON(message.playEnvironment);
     }
     return obj;
   },
@@ -1456,6 +1505,9 @@ export const Response = {
       : undefined;
     message.setDevicePowerState = (object.setDevicePowerState !== undefined && object.setDevicePowerState !== null)
       ? SetDevicePowerState_Response.fromPartial(object.setDevicePowerState)
+      : undefined;
+    message.playEnvironment = (object.playEnvironment !== undefined && object.playEnvironment !== null)
+      ? PlayEnvironment_Response.fromPartial(object.playEnvironment)
       : undefined;
     return message;
   },
@@ -1927,6 +1979,149 @@ export const PlayAnnouncement_Response = {
   },
   fromPartial<I extends Exact<DeepPartial<PlayAnnouncement_Response>, I>>(_: I): PlayAnnouncement_Response {
     const message = createBasePlayAnnouncement_Response();
+    return message;
+  },
+};
+
+function createBasePlayEnvironment(): PlayEnvironment {
+  return {};
+}
+
+export const PlayEnvironment = {
+  encode(_: PlayEnvironment, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+    return writer;
+  },
+
+  decode(input: _m0.Reader | Uint8Array, length?: number): PlayEnvironment {
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBasePlayEnvironment();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+      }
+      if ((tag & 7) === 4 || tag === 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
+    }
+    return message;
+  },
+
+  fromJSON(_: any): PlayEnvironment {
+    return {};
+  },
+
+  toJSON(_: PlayEnvironment): unknown {
+    const obj: any = {};
+    return obj;
+  },
+
+  create<I extends Exact<DeepPartial<PlayEnvironment>, I>>(base?: I): PlayEnvironment {
+    return PlayEnvironment.fromPartial(base ?? ({} as any));
+  },
+  fromPartial<I extends Exact<DeepPartial<PlayEnvironment>, I>>(_: I): PlayEnvironment {
+    const message = createBasePlayEnvironment();
+    return message;
+  },
+};
+
+function createBasePlayEnvironment_Request(): PlayEnvironment_Request {
+  return { filepath: "" };
+}
+
+export const PlayEnvironment_Request = {
+  encode(message: PlayEnvironment_Request, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+    if (message.filepath !== "") {
+      writer.uint32(10).string(message.filepath);
+    }
+    return writer;
+  },
+
+  decode(input: _m0.Reader | Uint8Array, length?: number): PlayEnvironment_Request {
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBasePlayEnvironment_Request();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1:
+          if (tag !== 10) {
+            break;
+          }
+
+          message.filepath = reader.string();
+          continue;
+      }
+      if ((tag & 7) === 4 || tag === 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
+    }
+    return message;
+  },
+
+  fromJSON(object: any): PlayEnvironment_Request {
+    return { filepath: isSet(object.filepath) ? globalThis.String(object.filepath) : "" };
+  },
+
+  toJSON(message: PlayEnvironment_Request): unknown {
+    const obj: any = {};
+    if (message.filepath !== "") {
+      obj.filepath = message.filepath;
+    }
+    return obj;
+  },
+
+  create<I extends Exact<DeepPartial<PlayEnvironment_Request>, I>>(base?: I): PlayEnvironment_Request {
+    return PlayEnvironment_Request.fromPartial(base ?? ({} as any));
+  },
+  fromPartial<I extends Exact<DeepPartial<PlayEnvironment_Request>, I>>(object: I): PlayEnvironment_Request {
+    const message = createBasePlayEnvironment_Request();
+    message.filepath = object.filepath ?? "";
+    return message;
+  },
+};
+
+function createBasePlayEnvironment_Response(): PlayEnvironment_Response {
+  return {};
+}
+
+export const PlayEnvironment_Response = {
+  encode(_: PlayEnvironment_Response, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+    return writer;
+  },
+
+  decode(input: _m0.Reader | Uint8Array, length?: number): PlayEnvironment_Response {
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBasePlayEnvironment_Response();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+      }
+      if ((tag & 7) === 4 || tag === 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
+    }
+    return message;
+  },
+
+  fromJSON(_: any): PlayEnvironment_Response {
+    return {};
+  },
+
+  toJSON(_: PlayEnvironment_Response): unknown {
+    const obj: any = {};
+    return obj;
+  },
+
+  create<I extends Exact<DeepPartial<PlayEnvironment_Response>, I>>(base?: I): PlayEnvironment_Response {
+    return PlayEnvironment_Response.fromPartial(base ?? ({} as any));
+  },
+  fromPartial<I extends Exact<DeepPartial<PlayEnvironment_Response>, I>>(_: I): PlayEnvironment_Response {
+    const message = createBasePlayEnvironment_Response();
     return message;
   },
 };
